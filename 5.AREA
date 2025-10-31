@@ -1,0 +1,34 @@
+class Areacal 
+{
+ // Method to calculate area of a circle (takes double)
+ double area(double radius) 
+ {
+ return 3.14f * radius * radius;
+ }
+ // Method to calculate area of a triangle (takes two doubles)
+ double area(double length, double breadth) 
+ {
+ return 0.5 * length * breadth;
+ }
+ // Method to calculate area of a rectangle (takes two ints)
+ int area(int length, int height) 
+ {
+ return length * height;
+ }
+}
+ public class B5
+ {
+ public static void main(String[] args) 
+ {
+ // Creating object of Areacal
+ Areacal ac = new Areacal();
+ // Calling overloaded methods with different argument types
+ // Calls method with one double argument ? matches circle method
+ System.out.println("The area of Circle is " + ac.area(3)); // int 3 promoted to
+double
+ // Calls method with two double arguments ? matches triangle method
+ System.out.println("The area of Triangle is " + ac.area(4.0, 5.0));
+ // Calls method with two int arguments ? matches rectangle method
+ System.out.println("The area of Rectangle is " + ac.area(3, 6));
+ }
+}
