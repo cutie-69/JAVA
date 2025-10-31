@@ -1,0 +1,52 @@
+import java.util.Scanner;  
+public class BranchingEx  
+{ 
+        public static void main(String[] args)  
+       { 
+         Scanner sc = new Scanner(System.in);  
+         // Getting input from user 
+         System.out.print("Enter a number: ");  
+         int num = sc.nextInt();  
+        // if-else-if ladder for checking sign (only once) 
+         if (num < 0) 
+         { 
+            System.out.println("Number is negative.");  
+         }  
+         else if (num == 0) 
+         { 
+            System.out.println("Number is zero.");  
+         } else  
+         { 
+            System.out.println("Number is positive.");  
+         } 
+        // if-else for even or odd 
+        if (num % 2 == 0)  
+         { 
+            System.out.println("Number is even.");  
+         } else  
+         { 
+            System.out.println("Number is odd.");  
+         } 
+        // switch-case example 
+        System.out.println("\ nChoose an option:");  
+        System.out.println("1. Square");  
+        System.out.println("2. Cube");  
+        System.out.println("3. Exit");  
+        int choice = sc.nextInt();  
+        switch (choice) 
+          { 
+            case 1: 
+                System.out.println("Square of " + num + " is " + (num * num));  
+                break; 
+            case 2: 
+                System.out.println("Cube of " + num + " is " + (num * num * num));  
+                break; 
+            case 3: 
+                System.out.println("Exiting program...");  
+                break; 
+            default: 
+                System.out.println("Invalid choice.");  
+          } 
+        sc.close();  
+    } 
+} 
