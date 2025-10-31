@@ -1,0 +1,69 @@
+//DEFAULT CONSTRUCTOR
+class Box {
+    // Instance variables for dimensions of the box
+    double width;
+    double height;
+    double depth;
+    // Default constructor initializing dimensions with fixed values
+    Box() {
+        width = 10;
+        height = 10;
+        depth = 10;
+    }
+    // Method to calculate and return the volume of the box
+    double volume() {
+        return width * height * depth;
+    }
+}
+class B3 {
+    public static void main(String args[]) {
+        // Creating a box object using the default constructor
+        Box mybox1 = new Box();
+        // Printing the volume of the box
+        System.out.println("The volume of mybox1 is " + mybox1.volume());
+    }
+}
+//PARAMETERIZEDCONSTRUCTOR
+class Box
+{
+double width;
+double height;
+double depth;
+// Constructor with three parameters
+Box(double w, double h, double d)
+{
+width = w;
+height = h;
+depth = d;
+}
+// Constructor with one parameter (cube)
+Box(double len)
+{
+width = height = depth = len;
+}
+// Default constructor
+Box()
+{
+width = height = depth = 0;
+}
+// Method to calculate and return the volume
+double volume()
+{
+return width * height * depth;
+}
+}
+// Main class to test the Box class
+public class B4 {
+public static void main(String args[]) {
+// Creating box objects using different constructors
+Box mybox1 = new Box(10, 5, 15); // using 3-parameter constructor
+Box mybox2 = new Box(20);
+// using 1-parameter constructor
+Box mybox3 = new Box();
+// using default constructor
+// Displaying the volumes of the boxes
+System.out.println("The volume of box1 is " + mybox1.volume());
+System.out.println("The volume of box2 is " + mybox2.volume());
+System.out.println("The volume of box3 is " + mybox3.volume());
+}
+}
