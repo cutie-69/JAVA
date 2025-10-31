@@ -1,4 +1,5 @@
 //DEFAULT CONSTRUCTOR
+// Save this program as B3.java
 class Box {
     // Instance variables for dimensions of the box
     double width;
@@ -24,6 +25,7 @@ class B3 {
     }
 }
 //PARAMETERIZEDCONSTRUCTOR
+// Save this file as B4.java
 class Box
 {
 double width;
