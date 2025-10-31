@@ -1,0 +1,133 @@
+//ABSTRACT CLASS
+abstract class Shape
+{
+// Abstract method (no body)
+abstract double area();
+}
+// Circle class inheriting Shape
+class Circle extends Shape
+{
+double radius;
+// Constructor
+Circle(double r)
+{
+radius = r;
+}
+// Overriding abstract method
+double area()
+{
+return Math.PI * radius * radius;
+}
+}
+// Rectangle class inheriting Shape
+class Rectangle extends Shape
+{
+double length, breadth;
+// Constructor
+Rectangle(double l, double b)
+{
+length = l;
+breadth = b;
+}
+// Overriding abstract method
+double area()
+{
+return length * breadth;
+}
+}
+// Triangle class inheriting Shape
+class Triangle extends Shape
+{
+double base, height;
+// Constructor
+Triangle(double b, double h)
+{
+base = b;
+height = h;
+}
+// Overriding abstract method
+double area() {
+return 0.5 * base * height;
+}
+}
+public class AbstractDemo
+{
+public static void main(String[] args)
+{
+// Upcasting: Parent reference -> Child object
+Shape s;
+s = new Circle(5);
+System.out.println("Area of Circle: " + s.area());
+s = new Rectangle(4, 6);
+System.out.println("Area of Rectangle: " + s.area());
+s = new Triangle(3, 7);
+System.out.println("Area of Triangle: " + s.area());
+}
+
+//INTERFACE
+//Multiple.java
+class Student
+{
+String name;
+int rollno;
+void getinfo(String n, int r)
+{
+name = n;
+rollno = r;
+}
+void displayinfo()
+{
+System.out.println("Name of the student: " + name);
+System.out.println("Roll number of the student: " + rollno);
+}
+}
+class Test extends Student {
+int AOA, COA;
+void getmarks(int m1, int m2)
+{
+AOA = m1;
+COA = m2;
+}
+void displaymarks()
+{
+System.out.println("Marks Obtained:");
+System.out.println("AOA Marks: " + AOA);
+System.out.println("COA Marks: " + COA);
+}
+}
+// interface for sports
+interface Sports
+{
+int score = 5; // by default: public static final
+void displayscore(); // by default: public abstract
+}
+// Results class inherits from Test and implements Sports
+class Results extends Test implements Sports
+{
+int total; // total marks including sports score
+// implementation of displayscore method from Sports interface
+public void displayscore()
+{
+
+System.out.println("Sports score: " + score);
+}
+void displayResult()
+{
+total = AOA + COA + score;
+System.out.println("Total Marks: " + total);
+}
+}
+class Multiple
+{
+public static void main(String args[])
+{
+Results r = new Results();
+r.getinfo("John", 101);
+r.getmarks(77,72);
+r.displayinfo();
+r.displaymarks();
+r.displayscore();
+r.displayResult();
+}
+}
+}
